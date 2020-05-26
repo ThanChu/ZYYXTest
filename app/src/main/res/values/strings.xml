@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ZYYXTest</string>
+
+    <!--Login Screen-->
+    <string name="text_hint_user_name">User Name</string>
+    <string name="text_hint_password">Password</string>
+    <string name="text_button_login">Login</string>
+</resources>
