@@ -1,17 +1,16 @@
 package com.example.zyyxtest.ui.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.Toast
-import androidx.core.widget.addTextChangedListener
 import com.example.zyyxtest.R
+import com.example.zyyxtest.base.BaseActivity
 import com.example.zyyxtest.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_login.*
 
-class LoginActivity : AppCompatActivity(), LoginView {
+class LoginActivity : BaseActivity(), LoginView {
 
     private var presenter: LoginPresenter? = null
 
@@ -62,10 +61,6 @@ class LoginActivity : AppCompatActivity(), LoginView {
      * else -> disable login button
      */
     private fun checkLogin() = presenter?.checkLogin(edt_user_name?.text.toString(), edt_password?.text.toString())
-
-    override fun showMessage(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-    }
 
     override fun isEnable(flag: Boolean) {
         btn_login.isEnabled = flag

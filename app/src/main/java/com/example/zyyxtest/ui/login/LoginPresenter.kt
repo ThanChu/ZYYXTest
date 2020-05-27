@@ -1,5 +1,6 @@
 package com.example.zyyxtest.ui.login
 
+import com.example.zyyxtest.data.DataLogined
 import com.example.zyyxtest.util.checkPassword
 
 class LoginPresenter(private val view: LoginView) {
@@ -28,6 +29,7 @@ class LoginPresenter(private val view: LoginView) {
      */
     fun handleNavigateToMainScreen(){
         //Todo handle something at here
+        DataLogined.setLoginStatus(true)
         view.navigateToMain()
     }
 }
